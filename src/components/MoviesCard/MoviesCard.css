@@ -1,0 +1,65 @@
+.movie__card {
+
+
+	box-sizing: border-box;
+	background-color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 270px;
+	min-height: 210px;
+	overflow: hidden;
+	flex-direction: column;
+	
+}
+
+.movie__card-text {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.movie__card-img {
+	height: 151px;
+	overflow: hidden;
+	width: 100%;
+	object-fit: cover;
+
+}
+
+.movie__card-title {
+	color: #000;
+	font-size: 13px;
+	font-weight: 500;
+	padding: 14px 0;
+}
+
+.movie__card-time {
+	color: #a0a0a0;
+	font-size: 11px;
+	font-weight: 400;
+	padding: 6px 0 0 0;
+	border-top: 1.5px solid #E8E8E8;
+	
+}
+
+.movie__like-button {
+
+background-image: url('../../images/save.svg');
+background-repeat: no-repeat;
+   background-color: transparent;
+   background-size: contain;
+	border:none;
+   width: 24px;
+   height: 24px;
+   transition: .3s ease;
+   cursor: pointer;
+	margin-top: 10px;
+}
+.movie__like-button:hover {
+	opacity: 0.59;
+}
+
+.movie__like-button_active {
+	background-image: url(../../images/save__active.svg);
+}
