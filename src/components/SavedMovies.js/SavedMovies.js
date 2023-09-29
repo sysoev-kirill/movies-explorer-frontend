@@ -4,7 +4,7 @@ import SearchForm from "../SearchForm/SearchForm";
 
 function SavedMovies () {
 return (
-<section className="saved__movies">
+<section className="saved-movies">
 	<SearchForm/>
 	<MoviesCardList/>
 </section>	

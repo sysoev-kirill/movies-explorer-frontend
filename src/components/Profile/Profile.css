@@ -1,7 +1,6 @@
 
 
 .profile__container {
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -10,9 +9,8 @@
 	margin: 0 auto;
 	text-align: center;
 	justify-content: center;
-
-	
 }
+
 .profile__title {
 	text-align: center;
 	font-size: 24px;
@@ -22,7 +20,7 @@
 }
 
 .profile__form {
-	padding: 96px 0 0 0;
+	padding: 90px 0 0 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -30,7 +28,7 @@
 }
 .profile__input {
 	border-style: none;
-	font-size: 14px;
+	font-size: 11px;
 	color: black;
 	padding-top: 15px;
 	margin-bottom: 16px;
@@ -59,7 +57,7 @@
 	transition: 0.3 ease-in;
 }
 .type__edit {
-	margin-top: 220px;
+	margin-top: 205px;
 }
 
 .type__logout {
@@ -69,14 +67,17 @@
 
 @media screen and (max-width: 769px) {
 
+
 	.profile__title {
-		padding-top: 234px;
+		padding-top: 310px;
 		margin: 0;
 	}
 
 	.profile__form {
 		max-width: 410px;
 		margin: 0 auto;
+		padding-top: 82px;
+
 	}
 
 	.profile__btn {
@@ -84,13 +85,13 @@
 	}
 
 	.type__edit {
-		margin-top: 210px;
+		margin-top: 195px;
 	}
 	
 
 }
 
-@media screen and (max-width: 459px) {
+@media screen and (max-width: 697px) {
 	
 	.profile__container {
 	padding: 70px 30px;
@@ -98,13 +99,14 @@
 	}
 
 	.profile__title {
-		padding-top: 70px;
+		padding-top: 75px;
 		margin: 0;
 	}
 
 	.profile__form {
 		min-width: 260px;
 		margin: 0 auto;
+		padding-top: 70px;
 	}
 
 	.profile__btn {
@@ -112,7 +114,7 @@
 	}
 
 	.type__edit {
-		margin-top: 379px;
+		margin-top: 360px;
 	}
 	
 

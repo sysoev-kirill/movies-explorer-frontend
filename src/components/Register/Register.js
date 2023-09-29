@@ -4,17 +4,18 @@ import Logo from '../../images/logo.png';
 
 function Register() {
 	return (
-		<section className="register__section">
-			<Link to='/' className="register__logo-link">
-				<img className="register__logo" src={Logo} alt='Лого' />
+		<section className="register">
+			<main className='form'>
+			<Link to='/' className="form__logo-link">
+				<img className="form__logo" src={Logo} alt='Лого' />
 			</Link>
-			<h1 className="register__title">Добро пожаловать!</h1>
-			<form className='register__form'>
-				<label className='register__label label'>
+			<h1 className="form__title">Добро пожаловать!</h1>
+			<form className='form__auth'>
+				<label className='form-field label'>
 					Имя
 					<input
 						type='text'
-						className='register__input'
+						className='form-field__input'
 						name='name'
 						minLength='2'
 						maxLength='30'
@@ -23,11 +24,11 @@ function Register() {
 						id='name'
 					/>
 				</label>
-				<label className='register__label label'>
+				<label className='form-field label'>
 					Email
 					<input
 						type='email'
-						className='register__input'
+						className='form-field__input'
 						name='email'
 						minLength='2'
 						maxLength='30'
@@ -36,11 +37,11 @@ function Register() {
 						id='email'
 					/>
 				</label>
-				<label className='register__label label'>
+				<label className='form-field label'>
 					Пароль
 					<input
 						type='password'
-						className='register__input'
+						className='form-field__input'
 						name='password'
 						minLength='2'
 						maxLength='20'
@@ -50,18 +51,20 @@ function Register() {
 					/>
 				</label>
 				<button
-					className='register__btn type__sign'
+					className='form__btn type__sign'
 					type='button'
 				>
 					Зарегистрироваться
 				</button>
-				<div className='register__btn type__link'
+				</form>
+				<div className='form__advice type__link'
 				>
 					Уже зарегистрированы? 
-				<Link to = '/signin' className='register__btn-link'>Войти</Link>
+				<Link to = '/signin' className='form__advice-link'>Войти</Link>
 				</div>
+			</main>
 
-			</form>
+
 
 		</section>
 	)

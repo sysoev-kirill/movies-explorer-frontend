@@ -11,28 +11,28 @@ function Header({ loggedIn }) {
       <header className="header">
          <Routes>
             
-            <Route path='/' element = {<div className="header type__dark">
+            <Route path='/' element = {<div className="header">
                <Link to='/'>
                   <img className="header__logo" src={logo} alt="Лого" />
                </Link>
                <Navigation loggedIn={loggedIn} />
             </div>}>
             </Route>
-            <Route path='/movies' element = {<div className="header type__light">
+            <Route path='/movies' element = {<div className="header header_light">
                <Link to='/'>
                   <img className="header__logo" src={logo} alt="Лого" />
                </Link>
                <Navigation loggedIn={loggedIn} nav={nav} />
             </div>}>
             </Route>
-            <Route path='/saved-movies' element = {<div className="header type__light">
+            <Route path='/saved-movies' element = {<div className="header header_light">
                <Link to='/'>
                   <img className="header__logo" src={logo} alt="Лого" />
                </Link>
                <Navigation loggedIn={loggedIn} nav={nav}/>
             </div>}>
             </Route>
-            <Route path='/profile' element = {<div className="header type__light">
+            <Route path='/profile' element = {<div className="header header_light">
                <Link to='/'>
                   <img className="header__logo" src={logo} alt="Лого" />
                </Link>

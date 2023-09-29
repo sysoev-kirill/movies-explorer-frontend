@@ -1,6 +1,6 @@
 @import "../Register/Register.css";
 
-.login__section {
+/* .login__section {
 	box-sizing: border-box;
 	margin-top: 70px;
 	display: flex;
@@ -10,9 +10,9 @@
 	height: 100%;
 	margin: 0 auto;
 	text-align: center;
-}
+} */
 
-.login__form {
+/* .login__form {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -25,7 +25,7 @@
 	font-size: 14px;
 	color: black;
 	padding-top: 15px;
-	margin-bottom: 10px;
+	margin-bottom: 25px;
 	text-align: start;
 	width: 100%;
 	border-bottom: 1px solid #e8e8e8;
@@ -33,6 +33,13 @@
 .login__btn:hover {
 	opacity: 0.7;
 	transition: 0.3 ease-in;
+}
+
+@media screen and (max-width: 1279px){
+	.login__input{
+		padding-top: 8px;
+		padding-bottom: 9px;
+	}
 }
 
 @media screen and (max-width: 568px){
@@ -50,4 +57,7 @@
    .register__title{
       margin: 0 auto;
    }
-}
+	.login__btn{
+		font-size: 12px;
+	}
+} */

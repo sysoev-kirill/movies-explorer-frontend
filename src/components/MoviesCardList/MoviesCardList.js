@@ -4,20 +4,19 @@ import MoviesCard from '../MoviesCard/MoviesCard';
 function MoviesCardList() {
 	return (
 
-		<section className="movies__section">
-			<div className="movies__box">
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
+		<section className="movies-card-list">
+			<ul className="movies-card-list__box">
+			<li className="movies-card-list__item"><MoviesCard /></li>
+			<li className="movies-card-list__item"><MoviesCard /></li>
+			<li className="movies-card-list__item"><MoviesCard /></li>
+			<li className="movies-card-list__item"><MoviesCard /></li>
+			<li className="movies-card-list__item"><MoviesCard /></li>
+			<li className="movies-card-list__item"><MoviesCard /></li>
+			<li className="movies-card-list__item"><MoviesCard /></li>
 				
-			</div>
-			<div className="movies__button-container">
-				<button className="movies__btn" type="button">
+			</ul>
+			<div className="movies-card-list__container">
+				<button className="movies-card-list__btn" type="button">
 					Еще
 				</button>
 			</div>

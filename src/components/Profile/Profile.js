@@ -3,8 +3,8 @@ import './Profile.css';
 function Profile() {
 	return (
 		<section className='profile__section'>
-			<div className='profile__container'>
-				<h2 className='profile__title'>Привет, Кирилл!</h2>
+			<main className='profile__container'>
+				<h1 className='profile__title'>Привет, Кирилл!</h1>
 				<form className='profile__form'>
 					<label className='profile__label'>
 						Имя
@@ -49,7 +49,7 @@ function Profile() {
 
 			</form>
 
-		</div>
+		</main>
 		</section >
 	)
 
