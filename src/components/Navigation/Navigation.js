@@ -13,7 +13,7 @@ function Navigation({ loggedIn }) {
    };
 
    const location = useLocation();
-   const namePath = location.pathname === "/" ? "burger-button__main" : "burger-button";
+   const namePath = location.pathname === "/" ? "burger-button" : "burger-button_black";
 
    let backgroundColor;
    let color;

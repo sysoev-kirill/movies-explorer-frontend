@@ -6,12 +6,12 @@ import React, { useState } from 'react';
 
 function Header({ loggedIn }) {
    const[nav, setNav] = useState(false);
-
+   
    return (
-      <header className="header">
+      // <header className="header">
          <Routes>
             
-            <Route path='/' element = {<div className="header">
+            <Route path='/' element = {<div className="header header_background">
                <Link to='/'>
                   <img className="header__logo" src={logo} alt="Лого" />
                </Link>
@@ -40,7 +40,7 @@ function Header({ loggedIn }) {
             </div>}>
             </Route>
          </Routes>
-      </header>
+      //</header> 
    )
 }
 

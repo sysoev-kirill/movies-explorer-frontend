@@ -31,7 +31,7 @@
    }
    .burger-menu__list {
       list-style: none;
-      margin: 46px 0 150px;
+      margin: 140px 0 150px;
       padding: 0;
       display: flex;
       flex-direction: column;
@@ -96,10 +96,14 @@
          left: 0;
       }
       .burger-menu__list{
-         margin-top: 103px;
+         margin-top: 122px;
       }
       .burger-menu__btn{
          margin-bottom: 50px;
+      }
+      .burger-menu__close{
+         top: 12px;
+         right: 17px;
       }
    }
 

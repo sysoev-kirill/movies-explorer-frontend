@@ -8,8 +8,11 @@
    position: fixed;
    top: 0px;
    z-index: 5;
-   background-color: #073042;
 
+
+}
+.header_background {
+   background-color: #073042;
 }
 
 .header__logo {

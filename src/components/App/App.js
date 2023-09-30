@@ -29,7 +29,14 @@ return (
           <Route path="/signup" element={<Register />} />
           <Route path="*" element={<NotFound/>}/>
         </Routes>
-      <Footer/>
+
+      <Routes>
+      <Route path="/" element={<Footer/>}/>
+      <Route path="/movies" element={<Footer />} />
+      <Route path="/saved-movies" element={<Footer />} />
+
+      </Routes>
+      {/* <Footer/> */}
       </div>
 
   );

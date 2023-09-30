@@ -26,8 +26,6 @@
    max-width: 460px;
    text-align: center;
    margin: 0 auto;
-
-
 }
 .techs__items {
    justify-content: center;
@@ -56,6 +54,15 @@
    justify-content: space-around;
 }
 
+.techs__heading {
+	padding: 100px 0 23px 0;
+	margin: 0 0 55px 0;
+	border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+	font-size: 22px;
+	font-weight: 400;
+	letter-spacing: -0.88px;
+}
+
 @media screen and (max-width: 1260px) {
    .techs {
       padding: 0px 50px;
@@ -72,7 +79,7 @@
    }
    .techs__item-description{
       font-size: 12px;
-      line-height: auto;
+      line-height: normal;
       letter-spacing: -0.04em;
       max-height: 57px;
    }
@@ -82,10 +89,10 @@
       margin-top: 83px;
       margin-bottom: 0;
       padding-bottom: 87px;
-
    }
-
-
+   .techs__heading{
+		padding-top: 90px;
+	}
 }
 
 
@@ -93,20 +100,26 @@
 
 @media screen and (max-width: 767px) {
    .techs {
-      padding: 0px 50px;
+      padding: 0px 18px;
       background-color: #ffffff;
 
    }
 
    .techs__container {
       margin-top: 0;
+      gap: 21px;
+
    }
    .techs__title {
-      font-size: 50px;
+      font-size: 30px;
+      margin-top: 0;
+      line-height: 45px;
+      letter-spacing: -1.2px;
    }
    .techs__text {
-      font-size: 12px;
-      line-height: 18px;
+      font-size: 11px;
+      line-height: 16px;
+      letter-spacing: -0.44px;
    }
    .techs__items {
       grid-template-columns: repeat(auto-fit, 84px);
@@ -116,27 +129,15 @@
       margin: 0;
       padding: 83px 60px 90px 60px;
    }
+   .techs__heading {
+		font-size: 18px;
+		letter-spacing:  -0.72px;;
+		padding: 70px 0 28px 0;
+	}
 }
 
 @media screen and (max-width: 425px) {
-   .techs {
-      padding: 0px 18px;
-   }
 
-   .techs__container {
-      margin-top: 0;
-      gap: 15px;
-   }
-   .techs__title {
-      font-size: 30px;
-      letter-spacing: -1.2px;
-      margin-top: 30px;
-   }
-   .techs__text {
-      font-size: 11px;
-      line-height: 16px;
-      letter-spacing: -0.44px;
-   }
    .techs__items {
       margin: 50px 0 0px;
       margin-bottom: 0;
@@ -147,4 +148,5 @@
       margin-top: 0;
       padding-top: 50px;
    }
+
 }

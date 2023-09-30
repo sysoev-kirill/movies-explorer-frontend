@@ -1,6 +1,6 @@
 .filter__checkbox-box{
 
-  align-items: left;
+  /* align-items: left; */
   display: flex;
   height: 20px;
   margin: auto;

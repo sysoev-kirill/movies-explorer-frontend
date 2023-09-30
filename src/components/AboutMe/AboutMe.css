@@ -1,5 +1,4 @@
 .about-me{
-   /* min-height: 608px; */
    padding: 18px 70px;
    box-sizing: border-box;
    margin: 10px auto 0;
@@ -13,12 +12,6 @@ justify-content: space-between;
 padding-top: 12px;
 }
 
-
-
-
-
-   
-
 .about-me__name {
    color: #000;
    font-size: 50px;
@@ -26,7 +19,6 @@ padding-top: 12px;
    line-height: 58px; 
    letter-spacing: -2px;
    margin: 0;
-
 }
 
 .about-me__text {
@@ -34,6 +26,7 @@ padding-top: 12px;
    font-weight: 500;
    line-height: 20px;
 }
+
 .about-me__info {
    font-size: 14px;
    font-weight: 400;
@@ -48,8 +41,8 @@ font-size: 14px;
 font-weight: 500;
 text-decoration: none;
 padding: 99px 0 0;
-
 }
+
 .about-me__image {
    background-color: #e8e8e8;
    height: 327px;
@@ -60,13 +53,19 @@ padding: 99px 0 0;
    background-image: url('../../images/photo.jpeg');
    background-size: cover;
    background-position: center;
-
 }
 
+.about-me__heading {
+	padding: 100px 0 23px 0;
+	margin: 0 0 55px 0;
+	border-bottom: 1px solid rgba(84, 84, 84, 0.7);
+	font-size: 22px;
+	font-weight: 400;
+	letter-spacing: -0.88px;
+}
 
 @media screen and (max-width: 1279px) {
    .about-me{
-      /* min-height: 608px; */
       margin: 0 auto;
       padding: 0 50px;   
    }
@@ -85,28 +84,27 @@ padding: 99px 0 0;
       letter-spacing: -0.04em;
       margin: 0;
       padding-right: 49px;
-
-   
    }
-   
+
    .about-me__text {
       font-size: 12px;
       font-weight: 500;
       line-height: 20px;
       padding-right: 49px;
-
-      /* max-width: 364px; */
    }
    .about-me__info {
       font-size: 12px;
       line-height: 18px;
       margin: 26px 0 80px 0;
       padding-right: 49px;
-      /* max-width: 364px; */
    }
    .about-me__wrapper{
       padding-top: 0;
    }
+   .about-me__heading{
+		padding-top: 90px;
+	}
+   
 }   
 
 
@@ -120,7 +118,7 @@ padding: 99px 0 0;
    .about-me__image{
       width: 292px;
       height: 352px;
-      margin: 42px 0 40px;
+      margin: 5px 0 40px;
    }
    .about-me__name{
       font-size: 30px;
@@ -138,4 +136,9 @@ padding: 99px 0 0;
       margin-top: 22px;
       margin-bottom: 39px;
    }
+   .about-me__heading {
+		font-size: 18px;
+		letter-spacing:  -0.72px;;
+		padding: 70px 0 28px 0;
+	}
 }

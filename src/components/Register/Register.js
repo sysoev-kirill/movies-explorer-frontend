@@ -4,8 +4,8 @@ import Logo from '../../images/logo.png';
 
 function Register() {
 	return (
-		<section className="register">
-			<main className='form'>
+		<main className="register">
+			<section className='form'>
 			<Link to='/' className="form__logo-link">
 				<img className="form__logo" src={Logo} alt='Лого' />
 			</Link>
@@ -62,11 +62,11 @@ function Register() {
 					Уже зарегистрированы? 
 				<Link to = '/signin' className='form__advice-link'>Войти</Link>
 				</div>
-			</main>
+			</section>
 
 
 
-		</section>
+		</main>
 	)
 
 }

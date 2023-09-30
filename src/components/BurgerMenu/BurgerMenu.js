@@ -7,7 +7,7 @@ function BurgerMenu ({isOpen, toggleMenu}) {
 
 return (
 
-<section className="burger-menu">
+<div className="burger-menu">
    
             {isOpen && (
                <>
@@ -19,7 +19,7 @@ return (
                         <Link to="/saved-movies" className="burger-menu__item" onClick={toggleMenu}>Сохраненные фильмы</Link>
                      </ul>
 
-                     <div className="navigation__profile burger-menu__btn">
+                     <div className="navigation__profile burger-menu__btn "onClick={toggleMenu}>
                         <Link
                            className="navigation__link type__account "
                            to="/profile"
@@ -35,7 +35,7 @@ return (
                </>
                
             )}
-         </section>
+         </div>
         
 )
 

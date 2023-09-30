@@ -23,7 +23,7 @@
    background-color: #2be080;
    height: 32px;
    border-radius: 40px;
-   margin-right: 27px 0 341px 0;
+   margin-right: 27px;
 }
 .navigation__profile-icon {
    background-color: #fff;
@@ -66,6 +66,7 @@
    font-weight: 400;
    line-height: 18px;
    text-decoration: none;
+   margin-left: 10px;
 }
 
 /* .light {
@@ -83,7 +84,7 @@
    margin-left: auto;
 }
 
-.burger-button {
+.burger-button_black {
    background: url(../../images/burger-btn.svg);
    visibility: hidden;
    width: 44px;
@@ -93,7 +94,7 @@
    cursor: pointer;
    padding: 0;
 }
-.burger-button__main {
+.burger-button {
    background: url(../../images/menu-icon-white.svg);
    visibility: hidden;
    width: 44px;
@@ -110,24 +111,39 @@
    }
    .navigation {
       visibility: hidden;
+      
+   }
+
+   .burger-button_black {
+      visibility: visible;
+      margin-right: 31px;
    }
 
    .burger-button {
-      visibility: visible;
-   }
-
-   .burger-button__main {
       visibility: visible;
       
    }
 }
 
-   @media screen and (max-width: 769px) {
-      .burger-button__main {
-         margin-right: 16px;
-      }
+   @media screen and (max-width: 767px) {
       .burger-button {
          margin-right: 16px;
       }
+      .burger-button_black {
+         margin-right: 16px;
+      }
+      .navigation__link-login{
+         margin-right: 30px;
+         width: 54px;
+         height: 26px;
+         margin-right: 15px;
+         font-size: 10px;
+      }
+      .navigation__link-register{
+         font-size: 10px;
+         margin-right: 15px;
+
+      }
    }
-   
+
+
