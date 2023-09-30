@@ -88,6 +88,7 @@ function Navigation({ loggedIn }) {
                         <Link
                            className="navigation__link type__account "
                            to="/profile"
+                           onClick={handleToggle}
                         >
                            Аккаунт
                         </Link>

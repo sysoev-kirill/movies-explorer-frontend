@@ -1,21 +1,23 @@
 import './MoviesCardList.css';
 import MoviesCard from '../MoviesCard/MoviesCard';
 
-function MoviesCardList() {
+function MoviesCardList({movies, movieId, onSave, onDelete}) {
+
+	
 	return (
 
 		<section className="movies__section">
-			<div className="movies__box">
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				<MoviesCard />
-				
-			</div>
+			<ul className="movies__box">
+				{movies.map((movie, i)=>( 
+				<MoviesCard 
+				movie={movie}
+				key={movie.id || movie._id}
+				onSaveMovie={onSave}
+				onDelete={onDelete}
+				/>
+			
+			))}
+			</ul>
 			<div className="movies__button-container">
 				<button className="movies__btn" type="button">
 					Еще

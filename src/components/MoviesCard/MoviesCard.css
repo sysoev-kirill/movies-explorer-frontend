@@ -1,6 +1,4 @@
 .movie__card {
-
-
 	box-sizing: border-box;
 	background-color: #fff;
 	display: flex;
@@ -10,7 +8,6 @@
 	min-height: 210px;
 	overflow: hidden;
 	flex-direction: column;
-	
 }
 
 .movie__card-text {
@@ -20,18 +17,17 @@
 }
 
 .movie__card-img {
-	height: 151px;
+	aspect-ratio: 339/190;
 	overflow: hidden;
 	width: 100%;
 	object-fit: cover;
-
 }
 
 .movie__card-title {
 	color: #000;
 	font-size: 13px;
 	font-weight: 500;
-	padding: 14px 0;
+	/* padding: 14px 0; */
 }
 
 .movie__card-time {
@@ -39,27 +35,69 @@
 	font-size: 11px;
 	font-weight: 400;
 	padding: 6px 0 0 0;
-	border-top: 1.5px solid #E8E8E8;
-	
+	border-top: 1.5px solid #e8e8e8;
+	margin-top: 18px;
 }
 
 .movie__like-button {
-
-background-image: url('../../images/save.svg');
-background-repeat: no-repeat;
-   background-color: transparent;
-   background-size: contain;
-	border:none;
-   width: 24px;
-   height: 24px;
-   transition: .3s ease;
-   cursor: pointer;
+	background-image: url("../../images/save.svg");
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: contain;
+	border: none;
+	width: 24px;
+	height: 24px;
+	transition: 0.3s ease;
+	cursor: pointer;
 	margin-top: 10px;
 }
+
 .movie__like-button:hover {
 	opacity: 0.59;
 }
 
-.movie__like-button_active {
+.movie__like-button:hover {
 	background-image: url(../../images/save__active.svg);
+}
+.movie__delete-button {
+	background-image: url("../../images/save.svg");
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: contain;
+	border: none;
+	width: 24px;
+	height: 24px;
+	transition: 0.3s ease;
+	cursor: pointer;
+	margin-top: 10px;
+}
+.movie__delete-button:hover {
+	background-image: url(../../images/deleteIcon.svg);
+}
+
+@media screen and (max-width: 1279px) {
+	.movie__card {
+		max-width: none;
+		min-width: 339px;
+		min-height: 269px;
+	}
+	.movie__card-img {
+		aspect-ratio: 339/190;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.movie__card {
+		min-width: auto;
+		/* min-width: 339px; */
+		min-height: auto;
+		width: 100%;
+	}
+	.movie__card-img {
+		aspect-ratio: auto;
+	}
+	.movie__card-title {
+		font-size: 12px;
+		list-style: normal;
+	}
 }

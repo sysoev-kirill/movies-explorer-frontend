@@ -2,6 +2,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
+  max-height: 50px;
 }
 
 .navigation__container {
@@ -158,7 +159,6 @@ flex-direction: column;
    right: 0;
    padding: 20px;
    opacity: 0;
-   visibility: visible;
    height: 100vh;
    max-width: 534px;
    display: flex;
