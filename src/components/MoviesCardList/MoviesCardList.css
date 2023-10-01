@@ -51,7 +51,7 @@ justify-content: center;
 
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1200px) {
 	.movies-card-list__box {
 		grid-template-columns: repeat(2, 1fr);
 		/* grid-template-columns: repeat(auto-fit,1fr); */
@@ -64,7 +64,7 @@ justify-content: center;
 	}
 }
 
-@media screen and (max-width: 697px) {
+@media screen and (max-width: 480px) {
 	.movies-card-list__box {
 		margin: 70px 0 80px;
 		display: flex;

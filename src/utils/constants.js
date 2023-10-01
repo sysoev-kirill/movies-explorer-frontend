@@ -12,14 +12,14 @@ export const SHORT_MOVIE =40;
 
 export const DEVICE_PARAMS = {
   desktop: {
-    width: 1280,
+    width: 1200,
     cards: {
-      total: 12,
+      total: 16,
       more: 4,
     },
   },
   tablet: {
-    width: 768,
+    width: 1200,
     cards: {
       total: 8,
       more: 2,

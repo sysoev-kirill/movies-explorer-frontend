@@ -5,8 +5,8 @@ import "./MoviesCardList.css";
 import { useWindowResize } from "../../hooks/useWindowResize";
 
 function MoviesCardList({ movies, onSave, onDelete, isShort, search }) {
-  const [visibleCards, setVisibleCards] = useState(12);
-  const [loadMoreCards, setLoadMoreCards] = useState(3);
+  const [visibleCards, setVisibleCards] = useState(16);
+  const [loadMoreCards, setLoadMoreCards] = useState(4);
   const { screen } = useWindowResize();
 
   useEffect(() => {
