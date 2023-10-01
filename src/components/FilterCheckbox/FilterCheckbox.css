@@ -1,12 +1,11 @@
 .filter__checkbox-box{
 
-  /* align-items: left; */
   display: flex;
   height: 20px;
   margin: auto;
   gap: 14px;
   border-radius: 20px;
-  /* padding: 6px; */
+
 }
 
 .filter__checkbox-box:hover {

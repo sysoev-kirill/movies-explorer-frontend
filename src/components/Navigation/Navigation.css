@@ -2,6 +2,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
+   max-height: 74px;
 }
 
 .navigation__container {
@@ -69,9 +70,6 @@
    margin-left: 10px;
 }
 
-/* .light {
-   color: #000;
-} */
 
 .navigation__link_account {
    display: flex;
@@ -111,6 +109,7 @@
    }
    .navigation {
       visibility: hidden;
+      
       
    }
 

@@ -60,7 +60,6 @@ function Navigation({ loggedIn }) {
                   <img className="navigation__profile-icon" src={Profile} alt="иконка аккаунта" />
                </div>
 
-               {/* <button onClick={handleToggle} className="burger-button" ></button> */}
                <button onClick={handleToggle} className={namePath} ></button>
             
                </>
@@ -75,7 +74,7 @@ function Navigation({ loggedIn }) {
             </>
          )}
          <BurgerMenu isOpen = {isOpen} toggleMenu = {handleToggle}/>
-         
+
 </nav>
 
    )

@@ -12,7 +12,7 @@ function NotFound() {
 					Страница не найдена
 				</p>
 				<Link to='/' className='notfound__button'>Назад</Link>
-			</div>
+		</div>
 		</main>
 	)
 

@@ -8,7 +8,6 @@ function Header({ loggedIn }) {
    const[nav, setNav] = useState(false);
    
    return (
-      // <header className="header">
          <Routes>
             
             <Route path='/' element = {<div className="header header_background">
@@ -40,7 +39,6 @@ function Header({ loggedIn }) {
             </div>}>
             </Route>
          </Routes>
-      //</header> 
    )
 }
 

@@ -1,6 +1,5 @@
 import './Promo.css'
 import banner from "../../images/banner__promo.png";
-import { Link } from 'react-router-dom';
 function Promo() {
 
 	return (
