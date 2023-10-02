@@ -18,12 +18,20 @@ export const useWindowResize = () => {
   useEffect(() => {
     if (width <= 697) {
       setScreen("mobile");
-    } else if (width <= 1200) {
+    } 
+    else if (width <= 1200) {
       setScreen("tablet");
-    } else {
+    }
+    else if (width <= 1296) {
       setScreen("desktop");
+    }
+    else if (width <= 1580) {
+      setScreen("xl");
+    } else {
+      setScreen("xxl");
     }
   }, [width]);
 
   return { width, screen };
 };
+

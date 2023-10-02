@@ -52,24 +52,36 @@ function App() {
   useEffect(() => {
     if (currentUser?._id) {
       setLoggedIn(true);
-      Promise.all([getSaveMovies(), getMovies()]).then(([saved, movies]) => {
-        localStorage.setItem(`Movies`, JSON.stringify(movies));
-
+      getSaveMovies().then((saved) => {
         const mySavedMovies = saved.filter(
           (movie) => movie.owner === currentUser._id
-        );
-
-        setAllMovies(
-          movies.map((movie) => ({
-            ...movie,
-            image: `${IMAGE_PUTH}/${movie.image.url}`,
-            thumbnail: `${IMAGE_PUTH}/${movie.image.formats.thumbnail.url}`,
-          }))
         );
         setSaveMovies(mySavedMovies);
       });
     }
   }, [currentUser]);
+
+  // useEffect(() => {
+  //   if (currentUser?._id) {
+  //     setLoggedIn(true);
+  //     Promise.all([getSaveMovies(), getMovies()]).then(([saved, movies]) => {
+  //       localStorage.setItem(`Movies`, JSON.stringify(movies));
+
+  //       const mySavedMovies = saved.filter(
+  //         (movie) => movie.owner === currentUser._id
+  //       );
+
+  //       setAllMovies(
+  //         movies.map((movie) => ({
+  //           ...movie,
+  //           image: `${IMAGE_PUTH}/${movie.image.url}`,
+  //           thumbnail: `${IMAGE_PUTH}/${movie.image.formats.thumbnail.url}`,
+  //         }))
+  //       );
+  //       setSaveMovies(mySavedMovies);
+  //     });
+  //   }
+  // }, [currentUser]);
 
   useEffect(() => {
     let newMovies = allMovies.map((item) => {
@@ -90,8 +102,21 @@ function App() {
     }
     setAllMovies(newMovies);
   }, [saveMovies]);
+
   // Movies
-  const getMovies = () => {
+  function onSearch() {
+    setIsLoading(true);
+    console.log('onSearch');
+    getMovies()
+    .then((movies) => {
+     
+      localStorage.setItem(`Movies`, JSON.stringify(movies));
+      setAllMovies(movies);
+
+    })
+    .finally(()=>setIsLoading(false));
+  }
+  const getMovies = async () => {
     const data = localStorage.getItem(`Movies`);
 
     if (data && JSON.parse(data).length > 0) {
@@ -101,7 +126,14 @@ function App() {
       });
       return Promise.resolve(clearData);
     } else {
-      return moviesApi.getMovies();
+      const movies = await moviesApi.getMovies();
+
+      const newMovies =  movies.map((movie) => ({
+        ...movie,
+        image: `${IMAGE_PUTH}/${movie.image.url}`,
+        thumbnail: `${IMAGE_PUTH}/${movie.image.formats.thumbnail.url}`,
+      }))
+      return Promise.resolve(newMovies);
     }
   };
 
@@ -154,7 +186,7 @@ function App() {
             text: "Вы успешно зарегистрировались!",
             imgIcon: successAuth,
           });
-          handleLogin({email, password});
+          handleLogin({ email, password });
         }
       })
       .catch((err) => {
@@ -265,6 +297,7 @@ function App() {
         saveMovies,
         handleSaveMovie,
         handleDeleteMovie,
+        onSearch,
       }}
     >
       <div className="page">
@@ -337,5 +370,3 @@ function App() {
 }
 
 export default App;
-
-

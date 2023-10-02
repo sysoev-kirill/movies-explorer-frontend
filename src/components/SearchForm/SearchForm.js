@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 import "./SearchForm.css";
@@ -54,8 +52,9 @@ function SearchForm({
         <button className="search__button" type="submit">
           Найти
         </button>
+        <span className="search__form-error">{inputSearchMessage}</span>
+
       </form>
-      <span className="search__form-error">{inputSearchMessage}</span>
       <FilterCheckbox status={shortStatus} onChange={onChangeShort} />
     </div>
   );

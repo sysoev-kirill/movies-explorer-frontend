@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import MoviesCard from "../MoviesCard/MoviesCard";
 import { DEVICE_PARAMS, SHORT_MOVIE } from "../../utils/constants";

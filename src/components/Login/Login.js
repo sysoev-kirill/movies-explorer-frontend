@@ -1,4 +1,3 @@
-
 import { Link, NavLink } from 'react-router-dom';
 import './Login.css';
 import Logo from '../../images/logo.png';
@@ -76,7 +75,7 @@ function Login({onLogin}) {
 				<button
 					className='form__btn type__sign'
 					type='submit'
-					disabled={disabled}
+					disabled={!isValid || isError.login || disabled}
 				>
 					Войти
 				</button>
@@ -84,7 +83,7 @@ function Login({onLogin}) {
 				<div className='form__advice type__link'
 				>
 					Еще не зарегистрированы? 
-				<NavLink to = '/signup' className='register__btn-link'>Регистрация</NavLink>
+				<NavLink to = '/signup' className='form__advice-link'>Регистрация</NavLink>
 				</div>
 		</section>
 		</main>

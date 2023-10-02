@@ -1,5 +1,3 @@
-
-
 import { Link, NavLink, useLocation } from "react-router-dom";
 import './Navigation.css'
 import Profile from '../../images/profile.svg';

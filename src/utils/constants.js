@@ -11,22 +11,36 @@ export const errorsName = {
 export const SHORT_MOVIE =40;
 
 export const DEVICE_PARAMS = {
+  xxl: {
+    width: 1280,
+    cards: {
+      total: 16,
+      more: 4,
+    },
+  },
+  xl: {
+    width: 1280,
+    cards: {
+      total: 16,
+      more: 4,
+    },
+  },
   desktop: {
-    width: 1200,
+    width: 1280,
     cards: {
       total: 16,
       more: 4,
     },
   },
   tablet: {
-    width: 1200,
+    width: 768,
     cards: {
       total: 8,
       more: 2,
     },
   },
   mobile: {
-    width: 480,
+    width: 500,
     cards: {
       total: 5,
       more: 2,

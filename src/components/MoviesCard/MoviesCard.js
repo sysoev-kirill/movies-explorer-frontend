@@ -1,19 +1,17 @@
 import { useContext } from "react";
-import { useLocation } from "react-router-dom";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import "./MoviesCard.css";
 
 function MoviesCard({ movie }) {
   const { handleSaveMovie, handleDeleteMovie, ifMovies } =
     useContext(CurrentUserContext);
-const location = useLocation()
+
   return (
     <div className="movies-card">
       <a href={movie.trailerLink} target="blank">
         <img
           className="movies-card__img"
           src={movie.image}
-
           alt={movie.nameRU}
         />
       </a>
@@ -46,4 +44,3 @@ const location = useLocation()
   );
 }
 export default MoviesCard;
-
