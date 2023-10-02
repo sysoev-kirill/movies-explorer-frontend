@@ -1,3 +1,5 @@
+Дипломный проект
+
 Aдрес: https://sysoev.nomoreparties.co
 Пулл-реквест: https://github.com/sysoev-kirill/movies-explorer-frontend/pull/2
 
