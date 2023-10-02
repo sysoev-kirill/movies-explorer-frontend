@@ -1,0 +1,47 @@
+.header {
+   width: 1280px;
+   /* box-sizing: border-box; */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   height: 74px;
+   position: fixed;
+   top: 0px;
+   z-index: 5;
+
+
+}
+.header_background {
+   background-color: #073042;
+}
+
+.header__logo {
+   height: 38px;
+   width: 38px;
+   margin: 18px 70px;
+}
+
+.header_light {
+   background-color: #FFF;
+}
+
+
+
+@media screen and (max-width: 1279px) {
+   .header {
+   width: 100%;
+   
+}
+.header__logo {
+   height: 38px;
+   width: 38px;
+   margin: 18px 30px;
+}
+}
+
+@media screen and (max-width: 697px) {
+   .header__logo {
+   margin: 18px 14px;
+
+}
+}

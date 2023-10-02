@@ -1,0 +1,148 @@
+.navigation {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   max-height: 74px;
+}
+
+.navigation__container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   align-self: center;
+   gap: 16px;
+   text-decoration: none;
+	position: absolute;
+	right: calc(50% - 105px);
+}
+
+.navigation__profile {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100px;
+   background-color: #2be080;
+   height: 32px;
+   border-radius: 40px;
+   margin-right: 27px;
+}
+.navigation__profile-icon {
+   background-color: #fff;
+   width: 11px;
+   height: 11px;
+   border-radius: 50%;
+   padding: 7px;
+   margin-left: 7px;
+   margin-right: 3px;
+}
+.navigation__link-login {
+   color: #000000;
+	visibility: visible;
+   font-size: 12px;
+   line-height: 16px;
+   width: 76px;
+   height: 32px;
+   background-color: #2be080;
+   border-radius: 3px;
+   text-decoration: none;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   margin-right: 70px;
+}
+.navigation__link-register {
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 1.33;
+   color: #ffffff;
+   margin-right: 30px;
+   text-decoration: none;
+	visibility: visible;
+}
+
+.navigation__link {
+   color: inherit;
+   font-size: 13px;
+   font-weight: 400;
+   line-height: 18px;
+   text-decoration: none;
+   margin-left: 10px;
+}
+
+
+.navigation__link_account {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #000;
+   border-radius: 40px;
+   font-size: 13px;
+   line-height: 12px;
+   margin-left: auto;
+}
+
+.burger-button_black {
+   background: url(../../images/burger-btn.svg);
+   visibility: hidden;
+   width: 44px;
+   height: 43px;
+   border: none;
+   object-fit: contain;
+   cursor: pointer;
+   padding: 0;
+}
+.burger-button {
+   background: url(../../images/menu-icon-white.svg);
+   visibility: hidden;
+   width: 44px;
+   height: 43px;
+   border: none;
+   object-fit: contain;
+   cursor: pointer;
+   margin-right: 30px;
+}
+
+@media screen and (max-width: 1279px) {
+   .navigation__link-login{
+      margin-right: 30px;
+   }
+   .navigation {
+      visibility: hidden;
+      
+      
+   }
+
+   .burger-button_black {
+      visibility: visible;
+      margin-right: 31px;
+   }
+
+   .burger-button {
+      visibility: visible;
+      
+   }
+}
+
+   @media screen and (max-width: 767px) {
+      .burger-button {
+         margin-right: 16px;
+      }
+      .burger-button_black {
+         margin-right: 16px;
+      }
+      .navigation__link-login{
+         margin-right: 30px;
+         width: 54px;
+         height: 26px;
+         margin-right: 15px;
+         font-size: 10px;
+      }
+      .navigation__link-register{
+         font-size: 10px;
+         margin-right: 15px;
+
+      }
+   }
+
+

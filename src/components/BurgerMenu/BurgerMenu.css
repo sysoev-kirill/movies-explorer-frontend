@@ -1,0 +1,110 @@
+
+
+.burger-menu {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   }
+   .burger-menu__container {
+   
+      background-color: #fff;
+      border: 1px solid #ccc;
+      position: absolute;
+      top: 0px;
+      left: 248px;
+      right: 0;
+      padding: 20px;
+      opacity: 0;
+      visibility: visible;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      z-index: 12;
+   }
+   .burger-menu__btn {
+      background-color: #fff;
+      box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      margin: auto auto 90px;
+   }
+   .burger-menu__list {
+      list-style: none;
+      margin: 140px 0 150px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+      text-align: center;
+   }
+   .burger-menu__item {
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #000;
+   }
+   .burger-menu__item:hover {
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-underline-offset: 6px;
+   }
+
+   .burger-menu__close {
+      background-image: url("../../images/cancel-icon.svg");
+      width: 27px;
+      height: 27px;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      position: absolute;
+      top: 23px;
+      right: 27px;
+      z-index: 200;
+      background-color: transparent;
+   }
+
+   .burger-menu__background {
+      visibility: hidden;
+
+   }
+
+   @media screen and (max-width: 1279px) {
+
+      .burger-menu__container {
+         opacity: 1;
+      }
+      .burger-menu__background {
+         left: 0;
+         top: 0;
+         height: 100%;
+         width: 100%;
+         position: fixed;
+         background-color: rgba(0, 0, 0, 0.5);
+         z-index: 10;
+         visibility: visible;
+   }
+   
+   }
+
+   @media screen and (max-width: 767px) {
+
+      .burger-menu__container {
+         opacity: 1;
+         max-width: 100%;
+         left: 0;
+      }
+      .burger-menu__list{
+         margin-top: 122px;
+      }
+      .burger-menu__btn{
+         margin-bottom: 50px;
+      }
+      .burger-menu__close{
+         top: 12px;
+         right: 17px;
+      }
+   }
+
+
