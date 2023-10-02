@@ -1,16 +1,25 @@
+
+
 import "./Register.css";
 import { Link } from "react-router-dom";
 import Logo from "../../images/logo.png";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useFormWithValidation } from "../../hooks/useForm";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 
 function Register({ onRegister }) {
   const { values, handleChange, errors, isValid } = useFormWithValidation();
   const { isError } = useContext(CurrentUserContext);
+  const [disabled, setDisabled] = useState(false);
+
+  useEffect(() => {
+    setDisabled(false)
+  }, [values])
+  
 
   function handleSubmit(e) {
     e.preventDefault();
+    setDisabled(true)
     const { name, email, password } = values;
     if (!isValid) {
       return;
@@ -93,7 +102,7 @@ function Register({ onRegister }) {
           <button
             className="form__btn type__sign"
             type="submit"
-            disabled={!isValid || isError.register}
+            disabled={!isValid || isError.register || disabled}
           >
             Зарегистрироваться
           </button>

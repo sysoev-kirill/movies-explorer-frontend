@@ -13,7 +13,8 @@ function NotFound() {
 				<p className="notfound__text">
 					Страница не найдена
 				</p>
-				<a href ='/' onClick={(evt)=> {evt.preventDefault(); navigate(-1)}} className='notfound__button'>Назад</a>
+				{/* <a href  ='/' onClick={(evt)=> {evt.preventDefault(); navigate(-1)}} className='notfound__button'>Назад</a> */}
+				<span onClick={(evt)=> {evt.preventDefault(); navigate(-1)}} className='notfound__button'>Назад</span>
 		</div>
 		</main>
 	)

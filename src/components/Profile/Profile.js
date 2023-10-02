@@ -1,3 +1,5 @@
+
+
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Profile.css";
@@ -33,7 +35,7 @@ function Profile({ onSignOut, onUpdateInfoUser }) {
   function handleSubmit(e) {
     e.preventDefault();
     setIsChanged(false);
-	setIsActive(false);
+	  setIsActive(false);
     onUpdateInfoUser({
       name: values.name,
       email: values.email,

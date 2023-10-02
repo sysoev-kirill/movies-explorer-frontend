@@ -1,4 +1,6 @@
-import { Link, useLocation } from "react-router-dom";
+
+
+import { Link, NavLink, useLocation } from "react-router-dom";
 import './Navigation.css'
 import Profile from '../../images/profile.svg';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
@@ -41,22 +43,22 @@ function Navigation({ loggedIn }) {
          {loggedIn ? (
             <>
                <div className="navigation__container ">
-                  <Link className="navigation__link" to="/movies" style={{ color }}>
+                  <NavLink className="navigation__link" to="/movies" style={{ color }}>
                      Фильмы
-                  </Link>
-                  <Link
+                  </NavLink>
+                  <NavLink
                      className="navigation__link" to="/saved-movies" style={{ color }}
                   >
                      Сохраненные фильмы
-                  </Link>
+                  </NavLink>
                </div>
                <div className="navigation__profile" style={{ backgroundColor, boxShadow }}>
-                  <Link
+                  <NavLink
                      className="navigation__link navigation__link_account"
                      to="/profile"
                   >
                      Аккаунт
-                  </Link>
+                  </NavLink>
                   <img className="navigation__profile-icon" src={Profile} alt="иконка аккаунта" />
                </div>
 
@@ -65,12 +67,12 @@ function Navigation({ loggedIn }) {
                </>
          ) : (
             <>
-            <Link className="navigation__link-register" to='/signup' style={{ color }}>
+            <NavLink className="navigation__link-register" to='/signup' style={{ color }}>
                Регистрация
-            </Link>
-            <Link className="navigation__link-login" to='/signin'>
+            </NavLink>
+            <NavLink className="navigation__link-login" to='/signin'>
                Войти
-            </Link>
+            </NavLink>
             </>
          )}
          <BurgerMenu isOpen = {isOpen} toggleMenu = {handleToggle}/>

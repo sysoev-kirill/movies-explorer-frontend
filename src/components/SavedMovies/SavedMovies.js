@@ -1,4 +1,5 @@
 
+
 import "./SavedMovies.css";
 import MoviesCardList from "../MoviesCardList/MoviesCardList";
 import SearchForm from "../SearchForm/SearchForm";
@@ -20,7 +21,7 @@ function SavedMovies() {
 
   useEffect(() => {
     if (saveMovies) {
-      setMovies(saveMovies);
+      setMovies(searchFilterMovies(saveMovies, search));
     }
   }, [saveMovies]);
 
@@ -31,6 +32,7 @@ function SavedMovies() {
         shortStatus={isShort}
         handleSearch={handleSearchMovie}
         value={search}
+        title='Сохраненные фильмы'
       />
       {isLoading ? (
         <Preloader />

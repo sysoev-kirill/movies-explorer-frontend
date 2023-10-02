@@ -1,17 +1,20 @@
-import { Link } from 'react-router-dom';
+
+import { Link, NavLink } from 'react-router-dom';
 import './Login.css';
 import Logo from '../../images/logo.png';
 import { useFormWithValidation } from '../../hooks/useForm';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 function Login({onLogin}) {
+	const [disabled, setDisabled] = useState(false);
 
 	const { values, handleChange, errors, isValid } = useFormWithValidation();
 	const { isError } = useContext(CurrentUserContext);
 
 	function handleSubmitForm(e) {
 		e.preventDefault();
+		setDisabled(true);
 		if (!isValid) {
 			return;
 		}
@@ -73,7 +76,7 @@ function Login({onLogin}) {
 				<button
 					className='form__btn type__sign'
 					type='submit'
-					disabled={!isValid || isError.login}
+					disabled={disabled}
 				>
 					Войти
 				</button>
@@ -81,7 +84,7 @@ function Login({onLogin}) {
 				<div className='form__advice type__link'
 				>
 					Еще не зарегистрированы? 
-				<Link to = '/signup' className="form__advice-link">Регистрация</Link>
+				<NavLink to = '/signup' className='register__btn-link'>Регистрация</NavLink>
 				</div>
 		</section>
 		</main>

@@ -1,15 +1,20 @@
+
+
 import { useEffect, useState } from "react";
 import FilterCheckbox from "../FilterCheckbox/FilterCheckbox";
 import "./SearchForm.css";
+import { useLocation } from "react-router-dom";
 
 function SearchForm({
   value,
   handleSearch,
   onChangeShort,
   shortStatus,
+  title
 }) {
   const [inputValue, setInputValue] = useState("");
   const [inputSearchMessage, setInputSearchMessage] = useState("");
+
 
   useEffect(() => {
     if (value) {
@@ -23,7 +28,7 @@ function SearchForm({
     if (event.target.value === "") {
       setInputSearchMessage("Нужно ввести ключевое слово");
     } else {
-      setInputSearchMessage(" ");
+      setInputSearchMessage("");
     }
   };
 
@@ -40,7 +45,7 @@ function SearchForm({
           value={inputValue || ""}
           type="text"
           name="search-input"
-          placeholder="Фильм"
+          placeholder={title}
           required
           minLength={2}
           maxLength={20}
@@ -49,10 +54,8 @@ function SearchForm({
         <button className="search__button" type="submit">
           Найти
         </button>
-        <span className="search__form-error">{inputSearchMessage}</span>
-
       </form>
-
+      <span className="search__form-error">{inputSearchMessage}</span>
       <FilterCheckbox status={shortStatus} onChange={onChangeShort} />
     </div>
   );

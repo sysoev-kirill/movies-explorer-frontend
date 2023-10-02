@@ -1,13 +1,16 @@
+
 import { useEffect, useState } from "react";
 import MoviesCard from "../MoviesCard/MoviesCard";
 import { DEVICE_PARAMS, SHORT_MOVIE } from "../../utils/constants";
 import "./MoviesCardList.css";
 import { useWindowResize } from "../../hooks/useWindowResize";
+import { useLocation } from "react-router-dom";
 
 function MoviesCardList({ movies, onSave, onDelete, isShort, search }) {
-  const [visibleCards, setVisibleCards] = useState(16);
-  const [loadMoreCards, setLoadMoreCards] = useState(4);
+  const [visibleCards, setVisibleCards] = useState(12);
+  const [loadMoreCards, setLoadMoreCards] = useState(3);
   const { screen } = useWindowResize();
+  const location = useLocation();
 
   useEffect(() => {
     const { total, more } = DEVICE_PARAMS[screen]?.cards;
@@ -24,13 +27,13 @@ function MoviesCardList({ movies, onSave, onDelete, isShort, search }) {
   const handleLoadMore = () => {
     setVisibleCards((prevVisibleCards) => prevVisibleCards + loadMoreCards);
   };
-
+  const cards = location.pathname === '/saved-movies' ? totalMovies.length : visibleCards;
 
   return (
     <section className="movies-card-list">
       <div className="movies-card-list__box">
         
-        {totalMovies && totalMovies.slice(0, visibleCards).map((movie) => (
+        {totalMovies && totalMovies.slice(0, cards).map((movie) => (
           <MoviesCard
             movie={movie}
             key={movie.id || movie._id}
@@ -41,7 +44,7 @@ function MoviesCardList({ movies, onSave, onDelete, isShort, search }) {
         {(totalMovies.length === 0 && search.length > 0)  && <span className="movies-card-list__error">Ничего не найдено</span>}
       </div>
       <div className="movies-card-list__container">
-        {totalMovies.length > visibleCards && (
+        {(totalMovies.length > visibleCards && location.pathname === '/movies') && (
           <button
             onClick={handleLoadMore}
             className="movies-card-list__btn"
